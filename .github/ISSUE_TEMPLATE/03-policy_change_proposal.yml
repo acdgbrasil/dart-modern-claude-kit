@@ -1,0 +1,131 @@
+name: Policy change proposal (H / P / C / MVVM / AT)
+description: Propose adding, modifying, or reversing an opinionated rule.
+title: "[policy] <H/P/C/MVVM/AT>### — <rule summary>"
+labels: ["policy", "proposal", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Policies are the heart of this kit.** Changes require **≥7 days of community feedback** before merging (unless trivially typographic).
+        > Every approved proposal becomes a section in [`RATIONALE.md`](https://github.com/acdgbrasil/dart-modern-claude-kit/blob/main/RATIONALE.md).
+
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Type of change
+      options:
+        - Add a new rule (e.g., H10, P6, C4)
+        - Modify an existing rule (clarification, edge case)
+        - Reverse / remove an existing rule (BREAKING CHANGE)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: policy_family
+    attributes:
+      label: Policy family
+      options:
+        - "Encapsulation (H)"
+        - "Pattern Matching (P)"
+        - "Concurrency & Performance (C)"
+        - "MVVM + Logic Layer"
+        - "Agent Testing (AT)"
+        - "Repository Naming"
+        - "Models as Schemas"
+        - "Inside-Out Implementation"
+        - "REGRA #2 (No Test Cheating)"
+        - "Other (specify in proposed rule)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_rule
+    attributes:
+      label: Proposed rule (one sentence, in the kit's voice)
+      description: |
+        Match the voice of existing rules: imperative, terse, no hedging.
+      placeholder: "H10 — Avoid late initialization in constructors."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why (the incident, constraint, or trade-off)
+      description: |
+        **The most important section.** Be specific.
+        - What bug or class of bugs does this prevent?
+        - Did you encounter this in production? Cite the symptom.
+        - What constraint (compiler, framework, mobile target) makes this necessary?
+        - What's the trade-off? (every rule has one)
+
+        Vague justifications get pushed back.
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_to_apply
+    attributes:
+      label: How to apply
+      description: |
+        - When does this rule kick in?
+        - When does it NOT apply (the exceptions)?
+        - Give 1-2 concrete code examples (good vs. bad).
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: counter_args
+    attributes:
+      label: Counter-arguments you considered
+      description: |
+        The strongest case AGAINST this rule.
+        If you can't think of one, you haven't thought hard enough.
+    validations:
+      required: true
+
+  - type: textarea
+    id: interactions
+    attributes:
+      label: Existing rules this interacts with
+      description: |
+        Does it conflict with H4? Does it strengthen P3? Does it make C2 redundant?
+        Cite the rule by ID.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: adoption_evidence
+    attributes:
+      label: Adoption evidence
+      options:
+        - I have applied this in production for ≥3 months
+        - I have applied this in production for <3 months
+        - I have prototyped it but not used in production
+        - I have not used it; this is a theoretical proposal
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale_draft
+    attributes:
+      label: Proposed RATIONALE.md entry (draft)
+      description: |
+        Write the section as it should appear in `RATIONALE.md`.
+        Include `**Why:**` and `**How to apply:**` lines.
+      render: markdown
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      options:
+        - label: I understand this proposal will stay open ≥7 days for community feedback before merging
+          required: true
+        - label: I understand a reversal/removal is a MAJOR semver bump and requires a clear migration path
+          required: true
+        - label: I'm willing to iterate on the proposal based on feedback
+          required: true

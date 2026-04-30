@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Contribution infrastructure: `CONTRIBUTING.md`, `CLAUDE.md` (instructions for AI agents working on the plugin), `.github/PULL_REQUEST_TEMPLATE.md`, three issue templates (bug report, new skill proposal, policy change proposal), and this `CHANGELOG.md`.
+- Issue templates upgraded from Markdown to **GitHub Issue Forms** (YAML schema): structured fields with required validation, dropdowns for enums (severity, adoption status, change type), checkbox checklists, and inline guidance. Files prefixed numerically (`01-`, `02-`, `03-`) to control display order in the template chooser.
+- `.github/ISSUE_TEMPLATE/config.yml` — template chooser config with `contact_links` directing "why" questions to `RATIONALE.md`, install questions to `docs/INSTALL.md`, contribution questions to `CONTRIBUTING.md` / `CLAUDE.md`. Blank issues remain enabled for edge cases.
+
+### Removed
+- Old Markdown issue templates (`bug_report.md`, `new_skill_proposal.md`, `policy_change_proposal.md`) — superseded by the YAML forms above.
 
 ## [0.1.0] - 2026-04-30
 

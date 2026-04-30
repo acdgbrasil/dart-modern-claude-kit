@@ -52,7 +52,7 @@ PRs welcome. **Read [`CONTRIBUTING.md`](CONTRIBUTING.md) first** — it has a qu
 
 If you are working with **Claude Code** to contribute, ask it to read [`CLAUDE.md`](CLAUDE.md) at the repo root before making any changes — it has step-by-step procedures for every contribution type, plus the hard rules (never reintroduce ACDG references, every new opinion needs a `RATIONALE.md` entry, etc.).
 
-Issue templates: [bug report](.github/ISSUE_TEMPLATE/bug_report.md) · [new skill / agent](.github/ISSUE_TEMPLATE/new_skill_proposal.md) · [policy change](.github/ISSUE_TEMPLATE/policy_change_proposal.md).
+Issue templates (web forms): [bug report](.github/ISSUE_TEMPLATE/01-bug_report.yml) · [new skill / agent](.github/ISSUE_TEMPLATE/02-new_skill_or_agent_proposal.yml) · [policy change](.github/ISSUE_TEMPLATE/03-policy_change_proposal.yml).
 
 ## License
 

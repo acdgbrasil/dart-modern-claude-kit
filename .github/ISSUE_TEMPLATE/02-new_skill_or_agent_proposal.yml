@@ -1,0 +1,119 @@
+name: New skill or agent proposal
+description: Propose adding a new skill or agent to the kit.
+title: "[proposal] <name> — <one-line purpose>"
+labels: ["proposal", "enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before proposing, please confirm this belongs in **this** kit (which is opinionated about modern Dart/Flutter), not in a separate plugin or your project's local `.claude/`.
+        Read [`RATIONALE.md`](https://github.com/acdgbrasil/dart-modern-claude-kit/blob/main/RATIONALE.md) § "What This Kit Does NOT Mandate" if unsure.
+
+  - type: dropdown
+    id: artifact_type
+    attributes:
+      label: What you are proposing
+      options:
+        - New Skill
+        - New Agent
+        - Both (a Skill + a paired Agent that follows it)
+    validations:
+      required: true
+
+  - type: input
+    id: proposed_name
+    attributes:
+      label: Proposed name (kebab-case)
+      placeholder: e.g. flutter-router-architect
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose (one paragraph)
+      description: What does this do? In plain language.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: |
+        The bug class, friction, or repetitive workflow this would solve.
+        "Best practice" is NOT a justification — point to the actual problem.
+        If you've experienced this in production, describe the symptom.
+      placeholder: "Without this, Claude tends to ... which causes ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Trigger words / activation
+      description: |
+        For a Skill: which user phrases should activate it?
+        For an Agent: when would the user (or the maestro) invoke it via the Agent tool?
+      placeholder: |
+        Skill triggers: "router", "GoRouter", "deferred loading", ...
+        Agent invocation: when the user asks for "implement routing for X feature"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: |
+        - What it would WRITE
+        - What it would READ
+        - What it would NEVER touch
+    validations:
+      required: true
+
+  - type: textarea
+    id: belongs_here
+    attributes:
+      label: Why this belongs in THIS kit
+      description: |
+        Why not in a separate plugin? Why not in your project's `.claude/`?
+        This kit is opinionated about modern Dart/Flutter MVVM+Logic.
+        Does this fit the existing voice and scope?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Existing alternatives
+      description: |
+        Is there an existing skill or agent that overlaps?
+        Could the existing one be extended instead of adding a new one?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: adoption_status
+    attributes:
+      label: Adoption status of the proposal
+      description: Be honest. Theoretical proposals are welcome but get lower priority.
+      options:
+        - I've used a similar pattern in production for ≥3 months
+        - I've used a similar pattern in production for <3 months
+        - I've sketched it but not used in production
+        - I've never tried it; it's an idea worth exploring
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pre_submit
+    attributes:
+      label: Pre-submit checks
+      options:
+        - label: I read `CONTRIBUTING.md` § "Quick map"
+          required: true
+        - label: I confirmed this doesn't duplicate an existing skill/agent
+          required: true
+        - label: I'm willing to discuss trade-offs and iterate on the proposal
+          required: true

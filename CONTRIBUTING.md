@@ -10,10 +10,9 @@ This file is for humans. There is also a [`CLAUDE.md`](CLAUDE.md) at the repo ro
 
 | You want to... | Read | Then |
 |---|---|---|
-| Report a bug or wrong behavior | [`.github/ISSUE_TEMPLATE/bug_report.md`](.github/ISSUE_TEMPLATE/bug_report.md) | Open an issue |
-| Propose a new skill | [`CLAUDE.md`](CLAUDE.md) § "How to add a new skill" + [`.github/ISSUE_TEMPLATE/new_skill_proposal.md`](.github/ISSUE_TEMPLATE/new_skill_proposal.md) | Open issue first, then PR |
-| Propose a new agent | [`CLAUDE.md`](CLAUDE.md) § "How to add a new agent" | Open issue first, then PR |
-| Change or add a policy (H/P/C rule) | [`CLAUDE.md`](CLAUDE.md) § "How to add or modify a policy" + [`.github/ISSUE_TEMPLATE/policy_change_proposal.md`](.github/ISSUE_TEMPLATE/policy_change_proposal.md) | Open issue first, then PR |
+| Report a bug or wrong behavior | [`.github/ISSUE_TEMPLATE/01-bug_report.yml`](.github/ISSUE_TEMPLATE/01-bug_report.yml) | Open an issue (use the form) |
+| Propose a new skill or agent | [`CLAUDE.md`](CLAUDE.md) § "How to add a new skill / agent" + [`.github/ISSUE_TEMPLATE/02-new_skill_or_agent_proposal.yml`](.github/ISSUE_TEMPLATE/02-new_skill_or_agent_proposal.yml) | Open issue first, then PR |
+| Change or add a policy (H/P/C rule) | [`CLAUDE.md`](CLAUDE.md) § "How to add or modify a policy" + [`.github/ISSUE_TEMPLATE/03-policy_change_proposal.yml`](.github/ISSUE_TEMPLATE/03-policy_change_proposal.yml) | Open issue first, ≥7-day discussion, then PR |
 | Fix a typo / clarify wording | — | Open PR directly |
 | Adapt the kit for your stack and don't want to upstream | — | Fork. Don't open a PR. |
 | Disagree with an existing opinion | [`RATIONALE.md`](RATIONALE.md) for the *why* first | If still disagree, open a `policy_change_proposal` issue |

@@ -1,0 +1,106 @@
+name: Bug report
+description: A skill, agent, or policy in this kit behaves incorrectly.
+title: "[bug] <component> — <one-line description>"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. The more concrete the reproduction, the faster it gets fixed.
+        Before opening, please skim [`RATIONALE.md`](https://github.com/acdgbrasil/dart-modern-claude-kit/blob/main/RATIONALE.md) — sometimes the "wrong" behavior is intentional and documented.
+
+  - type: dropdown
+    id: component_type
+    attributes:
+      label: Affected component type
+      description: Pick the kind of artifact where the bug lives.
+      options:
+        - Skill
+        - Agent
+        - Policy / reference doc
+        - Plugin manifest / install
+        - Documentation (README / CONTRIBUTING / RATIONALE / CLAUDE.md)
+    validations:
+      required: true
+
+  - type: input
+    id: component_name
+    attributes:
+      label: Specific component name
+      description: e.g. `flutter-modern`, `flutter-viewmodel-engineer`, `encapsulation_policy.md`
+      placeholder: flutter-viewmodel-engineer
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What I asked
+      description: Paste the literal prompt or scenario you gave Claude.
+      placeholder: "Implement a ViewModel for the patient list feature..."
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: What did the skill or agent actually do? Paste relevant output.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What I expected
+      description: What should it have done? Reference a specific rule in `RATIONALE.md` or a `SKILL.md` section if applicable.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      options:
+        - Always reproduces
+        - Sometimes reproduces (intermittent)
+        - Reproduced once, can't trigger again
+    validations:
+      required: true
+
+  - type: input
+    id: plugin_version
+    attributes:
+      label: Plugin version
+      description: From `.claude-plugin/plugin.json` — `version` field.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: claude_code_version
+    attributes:
+      label: Claude Code version
+      description: Run `claude --version` in your shell.
+      placeholder: e.g. 2.x
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Logs, screenshots, related issues, project layout — anything that helps.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: pre_submit
+    attributes:
+      label: Pre-submit checks
+      options:
+        - label: I checked `RATIONALE.md` and confirmed this is not intentional behavior
+          required: true
+        - label: I searched existing issues and this is not a duplicate
+          required: true

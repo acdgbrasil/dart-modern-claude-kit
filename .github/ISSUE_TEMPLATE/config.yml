@@ -1,0 +1,17 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Why does rule X exist?
+    url: https://github.com/acdgbrasil/dart-modern-claude-kit/blob/main/RATIONALE.md
+    about: Read RATIONALE.md first — most "why" questions are answered there with the originating incident or constraint.
+
+  - name: How do I install or use the kit?
+    url: https://github.com/acdgbrasil/dart-modern-claude-kit/blob/main/docs/INSTALL.md
+    about: Step-by-step install + verification + troubleshooting.
+
+  - name: How do I contribute (humans)?
+    url: https://github.com/acdgbrasil/dart-modern-claude-kit/blob/main/CONTRIBUTING.md
+    about: Quick "I want to..." map for contributors.
+
+  - name: How does Claude contribute to this repo?
+    url: https://github.com/acdgbrasil/dart-modern-claude-kit/blob/main/CLAUDE.md
+    about: Mechanics for AI agents working on the plugin itself — hard rules, procedures, and what requires explicit user authorization.

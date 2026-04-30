@@ -50,9 +50,10 @@ dart-modern-claude-kit/
 ├── .github/
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── ISSUE_TEMPLATE/
-│       ├── bug_report.md
-│       ├── new_skill_proposal.md
-│       └── policy_change_proposal.md
+│       ├── config.yml                              # template chooser config + contact_links
+│       ├── 01-bug_report.yml                       # GitHub Issue Form (web form)
+│       ├── 02-new_skill_or_agent_proposal.yml     # GitHub Issue Form
+│       └── 03-policy_change_proposal.yml          # GitHub Issue Form
 ├── README.md                    # Audience: anyone discovering the kit
 ├── RATIONALE.md                 # Audience: skeptics — every Why
 ├── CONTRIBUTING.md              # Audience: human contributors
