@@ -46,6 +46,14 @@ This kit is **opinionated**. The opinions come from real production scars, not t
 
 You are expected to disagree with some of it. That's fine — Claude Code lets you disable individual skills and agents per-project.
 
+## Contributing
+
+PRs welcome. **Read [`CONTRIBUTING.md`](CONTRIBUTING.md) first** — it has a quick "I want to..." map.
+
+If you are working with **Claude Code** to contribute, ask it to read [`CLAUDE.md`](CLAUDE.md) at the repo root before making any changes — it has step-by-step procedures for every contribution type, plus the hard rules (never reintroduce ACDG references, every new opinion needs a `RATIONALE.md` entry, etc.).
+
+Issue templates: [bug report](.github/ISSUE_TEMPLATE/bug_report.md) · [new skill / agent](.github/ISSUE_TEMPLATE/new_skill_proposal.md) · [policy change](.github/ISSUE_TEMPLATE/policy_change_proposal.md).
+
 ## License
 
 MIT. Copy, fork, adapt freely.
