@@ -1,0 +1,17 @@
+{
+  "name": "dart-modern-kit-marketplace",
+  "owner": {
+    "name": "Gabriel Vieira Soriano Aderaldo",
+    "email": "gaderaldo10@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "dart-modern-kit",
+      "source": "./",
+      "description": "Modern Dart/Flutter skills + multi-agent pipelines + opinionated policies. Forked from a real production monorepo. Security suite included.",
+      "version": "0.1.0",
+      "category": "development",
+      "tags": ["dart", "flutter", "mvvm", "security", "owasp"]
+    }
+  ]
+}

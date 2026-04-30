@@ -1,0 +1,21 @@
+{
+  "name": "dart-modern-kit",
+  "version": "0.1.0",
+  "description": "Modern Dart/Flutter skills + multi-agent pipelines, plus opinionated policies for encapsulation, pattern matching, concurrency and MVVM+Logic. Forked from a real production monorepo (ACDG/Conecta Raros). Includes a defensive+offensive security suite as bonus.",
+  "author": {
+    "name": "Gabriel Vieira Soriano Aderaldo",
+    "email": "gaderaldo10@gmail.com"
+  },
+  "homepage": "https://github.com/gaderaldo/dart-modern-claude-kit",
+  "license": "MIT",
+  "keywords": [
+    "dart",
+    "flutter",
+    "mvvm",
+    "command-pattern",
+    "result-pattern",
+    "atomic-design",
+    "security",
+    "owasp"
+  ]
+}
