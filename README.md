@@ -2,7 +2,11 @@
 
 > Skills, agents and opinionated policies for modern Dart/Flutter development with Claude Code.
 
-This is a **personal kit**, extracted from a real production monorepo (a Brazilian healthcare platform called Conecta Raros / ACDG). It carries opinionated decisions about:
+This kit is published under the **ACDG Technology** organization because it was extracted from the Conecta Raros monorepo — a Brazilian healthcare platform built by ACDG.
+
+> **Adoption status (as of 2026-04-30):** the kit has only been used in production by its original author (Gabriel Aderaldo) inside the Conecta Raros monorepo. It has not yet been validated by other ACDG projects or external teams. Treat the rules as battle-tested in *one* project, not the whole industry.
+
+It carries opinionated decisions about:
 
 - **MVVM + Logic Layer** with Command pattern + Result pattern
 - **Encapsulation Policy** (H1-H9) — when to use `_`, sealed classes, extension types
@@ -27,7 +31,7 @@ See [`docs/INSTALL.md`](docs/INSTALL.md) for setup, [`RATIONALE.md`](RATIONALE.m
 
 ```bash
 # Clone the repo
-git clone https://github.com/gaderaldo/dart-modern-claude-kit.git ~/dev/dart-modern-claude-kit
+git clone https://github.com/acdgbrasil/dart-modern-claude-kit.git ~/dev/dart-modern-claude-kit
 
 # Inside Claude Code, add as marketplace and install
 /plugin marketplace add ~/dev/dart-modern-claude-kit

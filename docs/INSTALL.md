@@ -11,7 +11,7 @@
 
 ```bash
 # 1. Clone the kit somewhere stable on your machine
-git clone https://github.com/gaderaldo/dart-modern-claude-kit ~/dev/dart-modern-claude-kit
+git clone https://github.com/acdgbrasil/dart-modern-claude-kit ~/dev/dart-modern-claude-kit
 
 # 2. Inside Claude Code, register as a local marketplace
 /plugin marketplace add ~/dev/dart-modern-claude-kit

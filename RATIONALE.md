@@ -10,6 +10,8 @@ If a rule below looks arbitrary or wrong, follow the **Source** link to understa
 
 This kit was extracted from a Flutter monorepo built for a Brazilian healthcare nonprofit (ACDG / Conecta Raros). The platform handles sensitive health data of patients with rare genetic diseases, runs on Web (WASM) + Desktop (native, no webview), and ships an offline-first experience for social workers in low-connectivity regions.
 
+**Honest disclosure on adoption (2026-04-30):** the rules below were forged inside a single monorepo, by a single primary author (Gabriel Aderaldo). They have not yet been validated against other ACDG codebases, other Flutter teams, or any third-party project. The kit is published under the ACDG organization for stewardship continuity — not because it carries broad organizational consensus. Treat each rule as a strong default with one production data point, and stress-test it before adopting wholesale.
+
 The architectural decisions here were forged in production. They are biased toward:
 
 - **Strict layering** over flexibility (because hospital-grade audits)
